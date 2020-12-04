@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+        
+{% block head %}
+<link rel="icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico"    />
+    <title>Rocketseat</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="links">
+{% for link in about.links %} 
+    <a href="{{ link.url }}">{{ link.name }}</a>
+{% endfor %}
+</div>
+<div id="wrapper">
+    <img src="{{about.avatar_url}}" alt="Rocketseat">
+    <h1>{{ about.name }}</h1>
+    <h3>{{ about.role }}</h2>
+    <ul>{{ about.description}}</ul>
+    <li>{{about.sub_j}}</li>
+    <li>{{about.sub_r}}</li>
+    <li>{{about.sub_re}}</li>
+    <li>{{about.sub_n}}</li>
+</div>
+{% endblock %}

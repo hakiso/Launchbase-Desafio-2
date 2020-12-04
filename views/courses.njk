@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+
+
+    {% block head %}
+    <title>Cursos - Rocketseat</title>
+    <link rel="stylesheet" href="/styledesafio.css">
+    <link rel="https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/favicon.ico"href="favicon.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    {% endblock %}
+
+    {% block content %} 
+
+        <div class="links">
+        
+        <div id="wrapper">
+        <h1>Cursos</h1>
+        </div>
+
+        <section class="cards">
+
+            {% for item in items %}
+            <div class="card" id="{{ item.id }}">
+                <div class="card__image-container">
+                    <img src="https://skylab.rocketseat.com.br/static/{{ item.img }}.svg" alt="">
+                </div>
+                <div class="card__content">
+                    <p>{{ item.title }}</p>
+                </div>
+                <div class="card__info">
+                    <p>{{ item.modules }}</p>
+                    <p class="card__price">{{ item.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+
+        <script src="/scriptdesafio.js"></script>
+
+        {% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+        
+{% block head %}
+    <title>Sobre - Mayk Brito</title>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="links">
+{% for link in about.links %} 
+    <a href="{{ link.url }}">{{ link.name }}</a>
+{% endfor %}
+</div>
+
+{% endblock %}
